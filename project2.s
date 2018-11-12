@@ -9,4 +9,5 @@ main:
 # getting user input
 li $v0 , 8
 la $a0 , userInput
-
+li $a1 , 1000
+syscall
