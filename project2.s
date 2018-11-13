@@ -15,3 +15,18 @@
 	li $t0 , 0
 		Char:
 		lbu $t0 , 0($a0)
+		beqz $t0 , ifempty
+		
+		
+		
+	
+	
+	
+	
+	
+	
+ifempty:
+	li $v0 , 4
+	la $a0 , emptyinput
+	syscall
+		
