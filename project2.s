@@ -19,14 +19,15 @@
 		
 		
 		
-	
-	
-	
-	
-	
-	
-ifempty:
-	li $v0 , 4
-	la $a0 , emptyinput
-	syscall
+		
+		
+	end:
+	# make sure the rest of the code is only reached if i call them 
+		li $v0, 10 #System call to end program 
+		syscall
+		
+	ifempty:
+		li $v0 , 4
+		la $a0 , emptyinput
+		syscall
 		
