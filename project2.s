@@ -13,14 +13,14 @@
 	syscall
 	#making sure $t is empty (0) 
 	li $t0 , 0
+	li $t1 , 10
 		Char:
 		lbu $t0 , 0($a0)
-		beqz $t0 , ifempty
+		beq $t0 , $t1 , ifempty
 		
 		
 		
-		
-		
+
 	end:
 	# make sure the rest of the code is only reached if i call them 
 		li $v0, 10 #System call to end program 
