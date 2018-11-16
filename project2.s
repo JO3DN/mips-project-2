@@ -155,4 +155,5 @@ InputIsEmpty:
 InputIsInvalid:
  la $a0,invalidbase
  li $v0, 4
- 
+ syscall
+ j exit
