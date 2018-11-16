@@ -94,3 +94,9 @@ ConvertBaseTen:
 ConvertBase33:
 	addi $s4, $s4, -55
 	j ChangeResultToSerial
+
+
+ChangeResultToSerial:
+	beq $s0, $s3, DigitOne
+
+
