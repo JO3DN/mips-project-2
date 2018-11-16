@@ -40,4 +40,6 @@ FindingLength:
 PostLength:
 	beqz $t0, InputIsEmpty
 	slti $t3, $t0, 5
+	beqz $t3, inputIsTooLong
+	move $a0, $t4
 	
