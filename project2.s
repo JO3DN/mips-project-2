@@ -75,3 +75,7 @@ ConversionPrep:
 	li $s2, 2
 	li $s1, 1
 	li $s5, 0
+
+baseConverterInput:
+	lb $s4, 0($a0)
+	beqz $s4, print_result
