@@ -103,3 +103,7 @@ ChangeResultToSerial:
 	beq $s0, $s2, DigitTwo
 	beq $s0, $s1, DigitThree
 	beq $s0, $s5, Digitfour
+
+DigitOne:
+	li $s6, 35937
+	mult $s4, $s6
