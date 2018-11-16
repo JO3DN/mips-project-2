@@ -16,9 +16,10 @@ DeleteLeftSpaces:
 	li $t8, 32 # space
 	lb $t9, 0($a0)
 	beq $t8, $t9, DeleteTheCharacter
+	move $t9, $a0
+	j input_len
 	
 
 DeleteTheCharacter:
 	addi $a0, $a0, 1
 	j DeleteLeftSpaces
-
