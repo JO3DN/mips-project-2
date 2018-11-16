@@ -161,4 +161,6 @@ InputIsInvalid:
 inputIsTooLong:
  la $a0,inputoolong
  li $v0, 4
- 
+ syscall
+ j exit
+
