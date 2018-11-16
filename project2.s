@@ -152,3 +152,7 @@ InputIsEmpty:
  syscall
  j exit
 
+InputIsInvalid:
+ la $a0,invalidbase
+ li $v0, 4
+ 
