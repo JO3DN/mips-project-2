@@ -15,3 +15,10 @@ main:
 DeleteLeftSpaces:
 	li $t8, 32 # space
 	lb $t9, 0($a0)
+	beq $t8, $t9, DeleteTheCharacter
+	
+
+DeleteTheCharacter:
+	addi $a0, $a0, 1
+	j DeleteLeftSpaces
+
