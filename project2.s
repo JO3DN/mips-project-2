@@ -100,3 +100,6 @@ LowerConverter:
 
 ChangeResultToSerial:
 	beq $s0, $s3, DigitOne
+	beq $s0, $s2, DigitTwo
+	beq $s0, $s1, DigitThree
+	beq $s0, $s5, Digitfour
