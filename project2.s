@@ -47,4 +47,7 @@ PostLength:
 CheckThestring:
 	lb $t5, 0($a0)
 	beqz $t5, ConversionPrep
+	beq $t5, $t1, ConversionPrep
+	slti $t6, $t5, 48 # if char < ascii(48), input invalid, ascii(48) = 0
+	bne $t6, $zero, InputIsInvalid
 	
