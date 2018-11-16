@@ -54,4 +54,6 @@ CheckThestring:
 	bne $t6, $zero, PushCharacter
 	slti $t6, $t5, 65 # if char < ascii(65), input invalid, ascii(97) = A
 	bne $t6, $zero, InputIsInvalid
+	slti $t6, $t5, 88 # if char < ascii(88), input is valid, ascii(88) = X
+	bne $t6, $zero, PushCharacter
 	
