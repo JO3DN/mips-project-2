@@ -91,3 +91,6 @@ ConvertBaseTen:
 	addi $s4, $s4, -48
 	j ChangeResultToSerial
 
+ConvertBase33:
+	addi $s4, $s4, -55
+	j ChangeResultToSerial
