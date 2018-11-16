@@ -42,4 +42,9 @@ PostLength:
 	slti $t3, $t0, 5
 	beqz $t3, inputIsTooLong
 	move $a0, $t4
+	j CheckThestring
+
+CheckThestring:
+	lb $t5, 0($a0)
+	beqz $t5, ConversionPrep
 	
