@@ -120,3 +120,8 @@ DigitTwo:
 	add $t7, $t7, $s7
 	addi $s0, $s0, -1
 	addi $a0, $a0, 1
+	j baseConverterInput
+
+DigitThree:
+	li $s6, 33
+	mult $s4, $s6
