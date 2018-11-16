@@ -87,3 +87,7 @@ baseConverterInput:
 	slti $t6, $s4, 120
 	bne $t6, $zero, LowerConverter
 
+ConvertBaseTen:
+	addi $s4, $s4, -48
+	j ChangeResultToSerial
+
