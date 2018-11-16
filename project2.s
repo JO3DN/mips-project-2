@@ -33,3 +33,7 @@ FindingLength:
 	lb $t2, 0($a0)
 	beqz $t2, PostLength
 	beq $t2, $t1, PostLength
+	addi $a0, $a0, 1
+	addi $t0, $t0, 1
+	j FindingLength
+
