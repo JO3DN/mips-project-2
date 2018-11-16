@@ -1,33 +1,17 @@
 .data
-	emptyinput: .asciiz "Input is empty."
-	inputoolong: .asciiz "Input is too long."
-	invalidbase: .asciiz "Invalid base-33 number."
-	userInput: .space 1000
+ emptyInput: .asciiz "Input is empty."
+invalidbase: .asciiz "Invalid base-33 number."
+inputoolong: .asciiz "Input is too long."
+ userInput: .space 1000
 
 .text
-	main: 
-	# getting user input
-	li $v0 , 8
-	la $a0 , userInput
-	li $a1 , 1000
-	syscall
-	#making sure $t is empty (0) 
-	li $t0 , 0
-	li $t1 , 10
-		Char:
-		lbu $t0 , 0($a0)
-		beq $t0 , $t1 , ifempty
-		
-		
-		
 
-	end:
-	# make sure the rest of the code is only reached if i call them 
-		li $v0, 10 #System call to end program 
-		syscall
-		
-	ifempty:
-		li $v0 , 4
-		la $a0 , emptyinput
-		syscall
-		
+main:
+ li $v0, 8
+ la $a0, userInput
+ li $a1, 100
+ syscall
+
+DeleteLeftSpaces:
+	li $t8, 32 # space
+	lb $t9, 0($a0)
