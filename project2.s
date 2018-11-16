@@ -149,4 +149,6 @@ exit:
 InputIsEmpty:
  la $a0, emptyInput
  li $v0, 4
- 
+ syscall
+ j exit
+
