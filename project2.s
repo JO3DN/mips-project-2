@@ -50,4 +50,6 @@ CheckThestring:
 	beq $t5, $t1, ConversionPrep
 	slti $t6, $t5, 48 # if char < ascii(48), input invalid, ascii(48) = 0
 	bne $t6, $zero, InputIsInvalid
+	slti $t6, $t5, 58 # if char < ascii(58), input is valid, ascii(58) = 9
+	bne $t6, $zero, PushCharacter
 	
