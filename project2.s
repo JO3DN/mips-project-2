@@ -84,4 +84,6 @@ baseConverterInput:
 	bne $t6, $zero, ConvertBaseTen
 	slti $t6, $s4, 88
 	bne $t6, $zero, ConvertBase33
-	
+	slti $t6, $s4, 120
+	bne $t6, $zero, LowerConverter
+
