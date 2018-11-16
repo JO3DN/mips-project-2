@@ -37,3 +37,7 @@ FindingLength:
 	addi $t0, $t0, 1
 	j FindingLength
 
+PostLength:
+	beqz $t0, InputIsEmpty
+	slti $t3, $t0, 5
+	
